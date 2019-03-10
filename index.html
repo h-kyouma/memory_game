@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="leftbar">
+        <h1>Memory!</h1>
+    </div>
+    <div class="rightbar">
+        TIME:<span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
+    <section class="memory-game">
+        <div class="memory-card" data-framework="yellow">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 140 200 200">
+                        <g fill="none" fill-rule="evenodd" transform="translate(60 140)">
+                            <circle cx="100" cy="100" r="100" fill="#FFD400" />
+                            <path fill="#FFF" d="M100 180c44 0 80-36 80-80 0-44.3-36-80-80-80-44.3 0-80 35.7-80 80 0 44 35.7 80 80 80zm-.2-52.2L67 145l6.2-36.5-26.6-26 36.8-5.3L99.8 44 116.3 77l36.8 5.4-26.5 26 6.2 36.5-33-17.2z" opacity=".8" />
+                        </g>
+                    </svg>'
+                alt="yellow">
+            <!--inline SVG to draw a picture on the spot-->
+        </div>
+        <div class="memory-card" data-framework="yellow">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 140 200 200">
+                            <g fill="none" fill-rule="evenodd" transform="translate(60 140)">
+                                <circle cx="100" cy="100" r="100" fill="#FFD400" />
+                                <path fill="#FFF" d="M100 180c44 0 80-36 80-80 0-44.3-36-80-80-80-44.3 0-80 35.7-80 80 0 44 35.7 80 80 80zm-.2-52.2L67 145l6.2-36.5-26.6-26 36.8-5.3L99.8 44 116.3 77l36.8 5.4-26.5 26 6.2 36.5-33-17.2z" opacity=".8" />
+                            </g>
+                        </svg>'
+                alt="yellow">
+        </div>
+        <div class="memory-card" data-framework="black">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="321 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(321 140)">
+                    <circle cx="100" cy="100" r="100" fill="#000" />
+                    <path fill="#FFF" fill-opacity=".5" d="M113 100V45H87v55H60v26h27v29h26v-29h27v-26h-27zm-13 80c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z" />
+                </g>
+            </svg>'
+                alt="black">
+        </div>
+        <div class="memory-card" data-framework="black">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="321 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(321 140)">
+                    <circle cx="100" cy="100" r="100" fill="#000" />
+                    <path fill="#FFF" fill-opacity=".5" d="M113 100V45H87v55H60v26h27v29h26v-29h27v-26h-27zm-13 80c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z" />
+                </g>
+            </svg>'
+                alt="black">
+        </div>
+        <div class="memory-card" data-framework="darkgreen">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="582 453 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(582 453)">
+                    <circle cx="100" cy="100" r="100" fill="#006860" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zM69.6 37l5 26.8c.4 2.7 1 2.7 1.5 0L80.4 35l4.5 28.8c.4 2.7 1.2 2.7 1.7 0l5-26.8L94 69.6c.3 2.8-1 6.6-3 8.5l-2.6 2.7c-2 2-3.5 5.7-3.4 8.5 0 0 2.8 75.3-4 75.2-6.8 0-5-75.2-5-75.2 0-2.7-1.4-6.6-3.4-8.5L70 78c-2-1.8-3.3-5.7-3-8.4L69.5 37zm56 0S111 55.5 111 78.7c0 23 5.3 24 5.3 24L115 159c0 2.8 2 5 4.8 5h1c2.7 0 5-2.2 4.8-5l-1.4-56.2 1.5-65.8z" />
+                </g>
+            </svg>'
+                alt="darkgreen">
+        </div>
+        <div class="memory-card" data-framework="darkgreen">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="582 453 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(582 453)">
+                    <circle cx="100" cy="100" r="100" fill="#006860" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zM69.6 37l5 26.8c.4 2.7 1 2.7 1.5 0L80.4 35l4.5 28.8c.4 2.7 1.2 2.7 1.7 0l5-26.8L94 69.6c.3 2.8-1 6.6-3 8.5l-2.6 2.7c-2 2-3.5 5.7-3.4 8.5 0 0 2.8 75.3-4 75.2-6.8 0-5-75.2-5-75.2 0-2.7-1.4-6.6-3.4-8.5L70 78c-2-1.8-3.3-5.7-3-8.4L69.5 37zm56 0S111 55.5 111 78.7c0 23 5.3 24 5.3 24L115 159c0 2.8 2 5 4.8 5h1c2.7 0 5-2.2 4.8-5l-1.4-56.2 1.5-65.8z" />
+                </g>
+            </svg>'
+                alt="darkgreen">
+        </div>
+        <div class="memory-card" data-framework="brown">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="582 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(582 140)">
+                    <circle cx="100" cy="100" r="100" fill="#683900" />
+                    <path fill="#FFF" fill-opacity=".5" d="M126.8 81h14c3 0 5.2 2.2 5.2 5v28c0 2.8-2.3 5-5 5h-14.3v-9.5h4.5c3 0 5.2-2.2 5.2-5v-9c0-2.8-2.3-5-5.2-5h-4.4V81zM100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zM69 65h57.8v70H69V65z" />
+                </g>
+            </svg>'
+                alt="brown">
+        </div>
+        <div class="memory-card" data-framework="brown">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="582 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(582 140)">
+                    <circle cx="100" cy="100" r="100" fill="#683900" />
+                    <path fill="#FFF" fill-opacity=".5" d="M126.8 81h14c3 0 5.2 2.2 5.2 5v28c0 2.8-2.3 5-5 5h-14.3v-9.5h4.5c3 0 5.2-2.2 5.2-5v-9c0-2.8-2.3-5-5.2-5h-4.4V81zM100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zM69 65h57.8v70H69V65z" />
+                </g>
+            </svg>'
+                alt="brown">
+        </div>
+        <div class="memory-card" data-framework="red">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="843 453 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(843 453)">
+                    <circle cx="100" cy="100" r="100" fill="#C40E01" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm0-29.2l-40.5-40.4c-11.2-11-11.2-29.2 0-40.3 11-11 29.2-11 40.3 0 0 0 .8-.2 1-.5 11.2-11 29.3-11 40.4 0 11.2 11.2 11.2 29.2 0 40.4L100 150.7z" />
+                </g>
+            </svg>'
+                alt="red">
+        </div>
+        <div class="memory-card" data-framework="red">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="843 453 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(843 453)">
+                    <circle cx="100" cy="100" r="100" fill="#C40E01" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm0-29.2l-40.5-40.4c-11.2-11-11.2-29.2 0-40.3 11-11 29.2-11 40.3 0 0 0 .8-.2 1-.5 11.2-11 29.3-11 40.4 0 11.2 11.2 11.2 29.2 0 40.4L100 150.7z" />
+                </g>
+            </svg>'
+                alt="red">
+        </div>
+        <div class="memory-card" data-framework="green">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="843 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(843 140)">
+                    <circle cx="100" cy="100" r="100" fill="#086800" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm-56-75.4c0-4.4 3.6-8 8-8h11.5c4.5 0 8 3.6 8 8V128c0 4.4-3.5 8-8 8H52c-4.4 0-8-3.6-8-8v-23.4zm84.3 0c0-4.4 3.6-8 8-8h11.5c4.4 0 8 3.6 8 8V128c0 4.4-3.5 8-8 8h-11.5c-4.4 0-8-3.6-8-8v-23.4zm20.2-8c0-26.8-21.8-48.6-48.6-48.6-27 0-48.7 21.8-48.7 48.6h12C63.5 76.3 80 60 100.3 60c20.4 0 37 16.3 37.2 36.6h11z" />
+                </g>
+            </svg>'
+                alt="green">
+        </div>
+        <div class="memory-card" data-framework="green">
+            <img class="back-face" src="img/memory.svg" alt="memory">
+            <img class="front-face" src='data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="843 140 200 200">
+                <g fill="none" fill-rule="evenodd" transform="translate(843 140)">
+                    <circle cx="100" cy="100" r="100" fill="#086800" />
+                    <path fill="#FFF" fill-opacity=".5" d="M100 180c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm-56-75.4c0-4.4 3.6-8 8-8h11.5c4.5 0 8 3.6 8 8V128c0 4.4-3.5 8-8 8H52c-4.4 0-8-3.6-8-8v-23.4zm84.3 0c0-4.4 3.6-8 8-8h11.5c4.4 0 8 3.6 8 8V128c0 4.4-3.5 8-8 8h-11.5c-4.4 0-8-3.6-8-8v-23.4zm20.2-8c0-26.8-21.8-48.6-48.6-48.6-27 0-48.7 21.8-48.7 48.6h12C63.5 76.3 80 60 100.3 60c20.4 0 37 16.3 37.2 36.6h11z" />
+                </g>
+            </svg>'
+                alt="green">
+        </div>
+
+
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
